@@ -123,8 +123,8 @@ def run_kfold_cv(
 
 if __name__ == "__main__":
 
-    MODEL_PATH   = r"C:\Users\q645302.MCBMW1\Documents\ML_models\all-MiniLM-L6-v2"
-    ROOT_FOLDER  = r"C:\Users\q645302.MCBMW1\BMW Group\ADAS EL-5-US-1 - General\21_Tools\ATP_Tool\external_files\Clustering_Database"
+    MODEL_PATH   = r"filepath_to_model"
+    ROOT_FOLDER  = r"filepath_to_rootfolder"
     n_splits = 5
 
     print("Loading labeled data …")
