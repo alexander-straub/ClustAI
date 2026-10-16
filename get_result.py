@@ -408,8 +408,8 @@ if __name__ == "__main__":
     # Regex pattern that identifies a "new" HDBSCAN-generated cluster name
     new_cluster_pattern = re.compile(r"_new_\d+$")
 
-    groundtruth_xlsx = r"C:\Users\q645302.MCBMW1\Desktop\26-07-500_ATS2_G65_V559042_5BB_SD_PHX_FINAL_cleaned_mpnet.xlsx"
-    clustai_xlsx = r"C:\Users\q645302.MCBMW1\Desktop\26-07-500_ATS2_G65_V559042_5BB_SD_PHX_FINAL - Copy (2).xlsx"
+    groundtruth_xlsx = r"filepath_to_excel"
+    clustai_xlsx = r"filepath_to_excel"
     results, error_breakdown, correct_vs_wrong_new_cluster = clustering_accuracy(groundtruth_xlsx, clustai_xlsx, new_cluster_pattern)
     top_confused_cluster_pairs(error_breakdown["misassigned_existing_examples"])
 
