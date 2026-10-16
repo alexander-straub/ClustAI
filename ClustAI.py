@@ -414,8 +414,8 @@ def run_hdbscan(
 
 if __name__ == "__main__":
     # -------------- Adjustables ------------------------------
-    model_path   = r"C:\Users\q645302.MCBMW1\Documents\ML_models\all-MiniLM-L6-v2"
-    root_folder  = r"C:\Users\q645302.MCBMW1\BMW Group\ADAS EL-5-US-1 - General\21_Tools\ATP_Tool\external_files\Clustering_Database"
+    model_path   = r"filepath_to_model"
+    root_folder  = r"filepath_to_rootfolder"
     alpha = 0.05
     # -----------------------------------------------------
 
@@ -436,7 +436,7 @@ if __name__ == "__main__":
     ref_indices = build_reference_indices_hdbscan(labeled_data_sorted, model, alpha=alpha)
 
     # --------- Insert path of .xlsx file with new events that have to be clustered -------------
-    xlsx_file = r"C:\Users\q645302.MCBMW1\Desktop\26-11-480_ATS3_NA5_5BB_CA_OR_WA - Copy_alpha_0.05.xlsx"
+    xlsx_file = r"filepath_to_excel"
     new_events, new_comb_ans = extract_events_from_single_xlsx(xlsx_file)
     # -------------------------------------------------------------------------------------------
 
