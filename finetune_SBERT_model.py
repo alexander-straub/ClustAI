@@ -19,9 +19,9 @@ import numpy as np
 # =========================================================
 # CONFIG
 # =========================================================
-EXCEL_PATH = r"C:\Users\q645302.MCBMW1\Desktop\cleaned_dataset.xlsx"
-MODEL_PATH = r"C:\Users\q645302.MCBMW1\Documents\ML_models\all-mpnet-base-v2"
-OUTPUT_PATH = r"C:\Users\q645302.MCBMW1\Documents\ML_models\finetuned_all-MiniLM-L6-v2\my-finetuned-all-mpnet-base-v2"
+EXCEL_PATH = r"filepath_to_excel"
+MODEL_PATH = r"filepath_to_model"
+OUTPUT_PATH = r"filepath_to_finetuned_model"
 MAX_PAIRS_PER_CLUSTER = 30
 VAL_SIZE = 0.2
 BATCH_SIZE = 16
