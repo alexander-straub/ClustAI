@@ -14,8 +14,8 @@ from sklearn.metrics import adjusted_rand_score
 from sklearn.preprocessing import LabelEncoder
 
 # ── CONFIG ──────────────────────
-GT_PATH           = r"C:\Users\q645302.MCBMW1\Desktop\26-11-480_ATS3_G50_5BB_CA_OR_WA_CANBC.xlsx"
-PRED_PATH         = r"C:\Users\q645302.MCBMW1\Desktop\26-11-480_ATS3_G50_5BB_CA_OR_WA_CANBC - Copy_cleaned.xlsx"
+GT_PATH           = r"filepath_to_groundt_truth_excel"
+PRED_PATH         = r"filepath_to_predicted_excel"
 
 ID_COL            = "Note"        # column used to align rows between files
 GT_CLUSTER_COL    = "Cluster"        # ground-truth cluster label column
