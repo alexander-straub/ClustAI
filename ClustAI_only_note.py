@@ -233,10 +233,10 @@ def run_hdbscan(
 
 if __name__ == "__main__":
     # -------------- Adjustables ------------------------------
-    model_path   = r"C:\Users\q645302.MCBMW1\Documents\ML_models\finetuned-all-mpnet-base-v2"
-    root_folder  = r"C:\Users\q645302.MCBMW1\BMW Group\ADAS EL-5-US-1 - General\21_Tools\ATP_Tool\external_files\Clustering_Database"
-    cleaned_database_filepath = r"C:\Users\q645302.MCBMW1\Desktop\cleaned_dataset.xlsx"
-    excluded_file = r"26-07-500_ATS2_G65_V559042_5BB_SD_PHX_FINAL - Copy"
+    model_path   = r"filepath_to_model"
+    root_folder  = r"filepath_to_rootfolder"
+    cleaned_database_filepath = r"filepath_to_database"
+    excluded_file = r""    # files to exclude (empty string if no files should be excluded)
     # -----------------------------------------------------
 
     # Load the already labeled data from previous .xlsx files
@@ -256,7 +256,7 @@ if __name__ == "__main__":
     ref_indices = build_reference_indices_hdbscan(labeled_data_sorted, model)
 
     # --------- Insert path of .xlsx file with new events that have to be clustered -------------
-    xlsx_file = r"C:\Users\q645302.MCBMW1\Desktop\test - Copy.xlsx"
+    xlsx_file = r"filepath_to_excel"
     new_events, new_comb_answers = extract_events_from_single_xlsx(xlsx_file)
     # -------------------------------------------------------------------------------------------
 
