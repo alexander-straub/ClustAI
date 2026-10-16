@@ -12,8 +12,8 @@ import pandas as pd
 from sklearn.metrics import adjusted_rand_score
  
 # ── 1. Load files ──────────────────────────────────────────────────────────────
-ground_truth    = pd.read_excel(r"C:\Users\q645302.MCBMW1\Desktop\26-11-480_ATS3_NA5_5BB_CA_OR_WA.xlsx", sheet_name='Triggerliste')
-my_results      = pd.read_excel(r"C:\Users\q645302.MCBMW1\Desktop\26-11-480_ATS3_NA5_5BB_CA_OR_WA - Copy_alpha_1.0.xlsx", sheet_name='Triggerliste')
+ground_truth    = pd.read_excel(r"filepath_to_ground_truth_excel", sheet_name='Triggerliste')
+my_results      = pd.read_excel(r"filepath_to_predicted_excel", sheet_name='Triggerliste')
 # copilot_results = pd.read_excel(r"C:\Users\q645302.MCBMW1\Desktop\Test .xlsx files for ClustAI\copilot_results_raw.xlsx")
  
 # ── 2. Column names ────────────────────────────────────────────────────────────
