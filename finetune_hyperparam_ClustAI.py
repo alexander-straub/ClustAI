@@ -38,7 +38,7 @@ def evaluate_threshold(
         pd.Dataframe with results
     """
 
-    xlsx_file = r"C:\Users\q645302.MCBMW1\Desktop\26-07-500_ATS2_NA05_V142804_5BB_SD_PHX_FINAL_threshold_ana.xlsx"
+    xlsx_file = r"filepath_to_excel"
     new_events, ref_clusters = extract_events_and_clusters_from_single_xlsx(xlsx_file)
 
     print("Building reference index from training split …")
@@ -117,8 +117,8 @@ def evaluate_threshold(
 
 if __name__ == "__main__":
     # -------------- Adjustables ------------------------------
-    model_path   = r"C:\Users\q645302.MCBMW1\Documents\ML_models\all-MiniLM-L6-v2"
-    root_folder  = r"C:\Users\q645302.MCBMW1\BMW Group\ADAS EL-5-US-1 - General\21_Tools\ATP_Tool\external_files\Clustering_Database"
+    model_path   = r"filepath_to_model"
+    root_folder  = r"filepath_to_rootfolder"
     # -----------------------------------------------------
 
     print("Loading data …")
@@ -138,10 +138,3 @@ if __name__ == "__main__":
 
     print("\n── Summary ──")
     print(results_df.to_string(index=False))
-    # --------- Save results in output file ----------------
-    # param_results_path = r"C:\Users\q645302.MCBMW1\Desktop\Test .xlsx files for ClustAI\threshold_evaluation.csv"
-    # if os.path.exists(param_results_path):
-    #     os.remove(param_results_path)
-    # results_df.to_csv(param_results_path, index=False)
-    # print("Saved -> threshold_evaluation.csv")
-    # ------------------------------------------------------
