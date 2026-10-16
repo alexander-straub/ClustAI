@@ -33,23 +33,7 @@ def get_labeled_data(root_folder):
     cluster_column = "Cluster"
 
     # List of .xlsx filenames (without path) to exclude
-    excluded_files = {
-        "KPI_Format_Converter",
-        "KPI-Results",
-        "Alt_Route_Brandon",
-        "FIT_Topics_Andre",
-        "FIT_Topics_Ralf",
-        "Topics Johannes",
-        "V142804_Axis_IKS1_EMV_Messung",
-        "CL_Trigger_Moritz",
-        "KL_Bouncing_Trigger_Wei-Yao",
-        "KL_Trigger_Alex",
-        "SLI Clusters",
-        "CLT_Analyse",
-        "CLR_Reported_Triggers",
-        "CLR_G65_NA05_SD_PHX_Email",
-        "26-11-490_ATS2_NA05_5BB_LA - Copy"
-        }
+    excluded_files = {}
 
     column_cluster_values = []
     column_note_values = []
@@ -118,22 +102,7 @@ def get_labeled_data_with_comb_answer(root_folder):
     combined_answers_column = "Combined answers"
 
     # List of .xlsx filenames (without path) to exclude
-    excluded_files = {
-        "KPI_Format_Converter",
-        "KPI-Results",
-        "Alt_Route_Brandon",
-        "FIT_Topics_Andre",
-        "FIT_Topics_Ralf",
-        "Topics Johannes",
-        "V142804_Axis_IKS1_EMV_Messung",
-        "CL_Trigger_Moritz",
-        "KL_Bouncing_Trigger_Wei-Yao",
-        "KL_Trigger_Alex",
-        "SLI Clusters",
-        "CLT_Analyse",
-        "CLR_Reported_Triggers",
-        "CLR_G65_NA05_SD_PHX_Email"
-        }
+    excluded_files = {}
 
     column_cluster_values = []
     column_note_values = []
@@ -242,10 +211,10 @@ def get_labeled_data_from_cleaned_dataset(cleaned_file_filepath, exclude_filepat
 
 if __name__ == "__main__":
     # -------------- Adjustables ------------------------------
-    model_path   = r"C:\Users\q645302.MCBMW1\Documents\ML_models\all-MiniLM-L6-v2"
-    root_folder  = r"C:\Users\q645302.MCBMW1\BMW Group\ADAS EL-5-US-1 - General\21_Tools\ATP_Tool\external_files\Clustering_Database\2026"
+    model_path   = r"filepath_to_model"
+    root_folder  = r"filepath_to_rootfolder"
     labeled_data = get_labeled_data(root_folder)
     df = pd.DataFrame(labeled_data, columns=["Cluster", "Note"])
     # Export to Excel
-    df.to_excel("test_for_copilot.xlsx", index=False)
+    df.to_excel("excel_export.xlsx", index=False)
     print('done')
